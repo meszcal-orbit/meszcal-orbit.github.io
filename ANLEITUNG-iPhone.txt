@@ -1,0 +1,92 @@
+ORBIT AUF DEM IPHONE – ANLEITUNG
+================================
+
+Orbit läuft auf dem iPhone komplett ohne Internet. Alle Daten bleiben im iPhone.
+Nur EINMAL zum Installieren braucht das iPhone Internet.
+
+
+A. EINMALIG: ORBIT INS INTERNET STELLEN (am PC, ca. 5 Minuten)
+--------------------------------------------------------------
+Das iPhone kann Apps nur über eine sichere Internet-Adresse (https) installieren.
+Dafür legst du die App-Dateien kostenlos bei Netlify ab. Dort liegen KEINE Daten,
+nur das leere Programm.
+
+1. "Orbit-iPhone.zip" entpacken (Rechtsklick -> "Alle extrahieren").
+   Es entsteht ein Ordner "Orbit-iPhone".
+2. Im Browser öffnen:  https://app.netlify.com/drop
+3. Kostenloses Konto anlegen ("Sign up", z. B. mit E-Mail oder Google).
+4. Den Ordner "Orbit-iPhone" mit der Maus in das Feld auf der Seite ziehen.
+5. Nach ein paar Sekunden steht dort eine Adresse wie
+       https://irgendein-name-123.netlify.app
+   Diese Adresse notieren.
+   (Tipp: Unter "Site configuration" -> "Change site name" kannst du einen
+    schöneren Namen wählen, z. B. dennis-orbit.)
+
+
+B. EINMALIG: ORBIT AUFS IPHONE (ca. 3 Minuten)
+----------------------------------------------
+1. Am iPhone in SAFARI die Adresse von oben öffnen.
+2. Unten auf das Teilen-Symbol tippen (Quadrat mit Pfeil nach oben).
+3. "Zum Home-Bildschirm" wählen -> "Hinzufügen".
+4. Safari schließen. Ab jetzt Orbit IMMER über das neue Orbit-Symbol öffnen
+   (nicht über Safari – Safari hat einen eigenen, getrennten Speicher).
+5. Name und optional einen 4-stelligen PIN eingeben -> "Los geht's".
+
+
+C. EINMALIG: DEINE DATEN VOM PC AUFS IPHONE
+-------------------------------------------
+1. Am PC: Orbit öffnen -> Zahnrad (Startseite oben rechts).
+2. Bei "Abgleich PC <-> iPhone" den Schalter "Bilder und Dateien mitschicken"
+   EINSCHALTEN und auf "Daten senden" klicken -> "Speichern".
+   Die Datei "Orbit-Sync_Datum_Uhrzeit.json" liegt jetzt im Ordner "Downloads".
+3. Eine Mail an dich selbst schreiben und diese Datei anhängen.
+   (Ist die Datei größer als ca. 20 MB, lehnt der Mail-Anbieter sie evtl. ab.
+    Dann stattdessen über iCloud Drive oder OneDrive aufs iPhone bringen.)
+4. Am iPhone die Mail öffnen, auf den Anhang tippen -> Teilen-Symbol ->
+   "In Dateien sichern" -> "Sichern".
+5. Orbit (Symbol am Home-Bildschirm) öffnen -> "Import" -> die Datei
+   aus "Dateien" wählen -> "Ersetzen". Fertig – alle Daten sind da.
+Danach darfst du das Internet am iPhone ausschalten. Orbit funktioniert weiter.
+
+
+D. TÄGLICH: PC UND IPHONE ABGLEICHEN (per Mail)
+-----------------------------------------------
+Du kannst auf beiden Geräten Einträge machen. So bringst du sie zusammen:
+
+Vom iPhone zum PC:
+1. Orbit am iPhone -> Zahnrad -> "Daten senden" -> "Teilen" -> "Mail"
+   -> an dich selbst schicken.
+2. Am PC die Mail öffnen und den Anhang speichern.
+3. Orbit am PC -> Zahnrad -> "Daten empfangen" -> Datei wählen -> "Abgleichen".
+
+Vom PC zum iPhone:
+1. Orbit am PC -> Zahnrad -> "Daten senden" -> "Speichern" -> Datei aus
+   "Downloads" an eine Mail an dich selbst anhängen.
+2. Am iPhone: Anhang -> "In Dateien sichern".
+3. Orbit am iPhone -> Zahnrad -> "Daten empfangen" -> Datei wählen -> "Abgleichen".
+
+Gut zu wissen:
+- Der Dateiname enthält Datum und Uhrzeit, z. B. Orbit-Sync_2026-10-21_18-30.json.
+- Orbit vergleicht jeden einzelnen Eintrag und behält immer den NEUEREN Stand.
+  Es geht also nichts verloren, auch wenn du eine alte Datei erwischst.
+- Ist die Datei älter als deine letzte Änderung, warnt Orbit dich vorher.
+- Was du auf einem Gerät löschst, wird beim Abgleich auch auf dem anderen gelöscht.
+- "Bilder mitschicken" nur einschalten, wenn neue Bilder/Dateien dazugekommen sind
+  (sonst wird die Mail unnötig groß).
+- Vor dem Abgleich zeigt Orbit, was sich ändert. "Abbrechen" ändert nichts.
+
+
+E. SICHERHEIT DEINER IPHONE-DATEN
+---------------------------------
+- Die Daten liegen nur im iPhone. Wenn du Orbit vom Home-Bildschirm LÖSCHST,
+  sind auch die Daten darauf weg. Deshalb ab und zu "Daten senden" machen –
+  dann liegt immer eine Kopie in deiner Mail und auf dem PC.
+- Tresor-PIN (Standard): 1710 – änderbar im Tresor über das Zahnrad.
+
+
+F. UPDATES
+----------
+Wenn du von mir eine neue "Orbit-iPhone.zip" bekommst:
+Bei Netlify deine Seite öffnen -> "Deploys" -> den neuen Ordner "Orbit-iPhone"
+in das Feld ziehen. Orbit am iPhone zweimal öffnen (mit Internet) – fertig.
+Deine Daten bleiben dabei erhalten.
