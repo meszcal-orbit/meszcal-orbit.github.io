@@ -1,92 +1,152 @@
-ORBIT AUF DEM IPHONE – ANLEITUNG
-================================
+ORBIT AUF IPHONE UND IPAD – NEU INSTALLIEREN, SCHRITT FÜR SCHRITT
+==================================================================
 
-Orbit läuft auf dem iPhone komplett ohne Internet. Alle Daten bleiben im iPhone.
-Nur EINMAL zum Installieren braucht das iPhone Internet.
+Orbit läuft auf iPhone und iPad als eigene App (ohne App Store), auch ohne
+Internet. Es ist dieselbe App für beide Geräte: Orbit erkennt selbst, ob es auf
+dem iPhone oder dem iPad läuft, und passt Größe und Aufteilung an. Dreht man das
+iPad quer, schaltet Orbit automatisch auf die Queransicht um.
 
+Deine Daten kommen vom PC. Was auf der alten iPhone-Version war, wird nicht
+gebraucht.
 
-A. EINMALIG: ORBIT INS INTERNET STELLEN (am PC, ca. 5 Minuten)
---------------------------------------------------------------
-Das iPhone kann Apps nur über eine sichere Internet-Adresse (https) installieren.
-Dafür legst du die App-Dateien kostenlos bei Netlify ab. Dort liegen KEINE Daten,
-nur das leere Programm.
-
-1. "Orbit-iPhone.zip" entpacken (Rechtsklick -> "Alle extrahieren").
-   Es entsteht ein Ordner "Orbit-iPhone".
-2. Im Browser öffnen:  https://app.netlify.com/drop
-3. Kostenloses Konto anlegen ("Sign up", z. B. mit E-Mail oder Google).
-4. Den Ordner "Orbit-iPhone" mit der Maus in das Feld auf der Seite ziehen.
-5. Nach ein paar Sekunden steht dort eine Adresse wie
-       https://irgendein-name-123.netlify.app
-   Diese Adresse notieren.
-   (Tipp: Unter "Site configuration" -> "Change site name" kannst du einen
-    schöneren Namen wählen, z. B. dennis-orbit.)
+Du brauchst: den PC, dein GitHub-Konto "meszcal-orbit", die Datei
+"Orbit-iPhone.zip" und ca. 20 Minuten.
 
 
-B. EINMALIG: ORBIT AUFS IPHONE (ca. 3 Minuten)
-----------------------------------------------
-1. Am iPhone in SAFARI die Adresse von oben öffnen.
-2. Unten auf das Teilen-Symbol tippen (Quadrat mit Pfeil nach oben).
-3. "Zum Home-Bildschirm" wählen -> "Hinzufügen".
-4. Safari schließen. Ab jetzt Orbit IMMER über das neue Orbit-Symbol öffnen
-   (nicht über Safari – Safari hat einen eigenen, getrennten Speicher).
-5. Name und optional einen 4-stelligen PIN eingeben -> "Los geht's".
+A. AM PC: DIE APP INS INTERNET STELLEN (einmalig)
+-------------------------------------------------
+iPhone und iPad können die App nur von einer sicheren Internet-Adresse
+installieren. Dafür legst du die Programmdateien bei GitHub ab. Dort liegen
+KEINE Daten, nur das leere Programm.
+
+1. "Orbit-iPhone.zip" entpacken: Rechtsklick -> "Alle extrahieren" -> "Extrahieren".
+   Es entsteht ein Ordner "Orbit-iPhone". Darin liegen nur Dateien
+   (keine Unterordner), u. a. "index.html" und "sw.js".
+
+2. https://github.com öffnen und als "meszcal-orbit" anmelden.
+
+3. Gibt es schon ein Repository "meszcal-orbit.github.io"?
+   (Prüfen: https://github.com/meszcal-orbit?tab=repositories öffnen.)
+   - Nein: weiter mit Schritt 4.
+   - Ja: Es wird neu angelegt, damit nichts Altes stört. Repository
+     "meszcal-orbit.github.io" anklicken -> oben "Settings" -> ganz nach unten
+     -> "Delete this repository" -> bestätigen.
+     ACHTUNG: NUR "meszcal-orbit.github.io" löschen, NIEMALS "orbit-daten"
+     (dort liegt deine verschlüsselte Cloud).
+
+4. Oben rechts auf "+" -> "New repository".
+   - Repository name:   meszcal-orbit.github.io   (genau so, alles klein)
+   - "Public" auswählen  (WICHTIG – sonst gibt es keine Internet-Adresse.
+     Es liegen nur Programmdateien darin, keine Daten.)
+   - Sonst nichts ankreuzen -> unten "Create repository".
+
+5. Auf der nächsten Seite auf den blauen Link "uploading an existing file" klicken.
+
+6. Im Windows-Explorer den Ordner "Orbit-iPhone" ÖFFNEN (hineingehen),
+   mit Strg+A ALLES darin markieren und in das Browserfenster ziehen.
+   Wichtig: den INHALT ziehen, nicht den Ordner "Orbit-iPhone" selbst.
+   Warten, bis unten alle Dateien aufgelistet sind.
+
+7. Ganz unten auf den grünen Knopf "Commit changes" klicken und warten.
+   Danach stehen auf der Repository-Seite viele Dateien, u. a. "index.html",
+   "sw.js" und "index-….js". Steht dort nur ein Ordner "Orbit-iPhone":
+   Schritt 3 bis 7 wiederholen.
+
+8. Oben "Settings" -> links "Pages".
+   Bei "Build and deployment":  Source = "Deploy from a branch",
+   Branch = "main" und daneben "/ (root)" -> "Save".
+
+9. 2 Minuten warten, dann am PC https://meszcal-orbit.github.io öffnen.
+   Es muss die Orbit-Anmeldeseite erscheinen.
+   Steht dort "404": noch 2–3 Minuten warten und neu laden. Bleibt es bei 404,
+   bei Settings -> Pages nachsehen: oben muss "Your site is live at
+   https://meszcal-orbit.github.io" stehen. Ist das Repository nicht genau
+   "meszcal-orbit.github.io" benannt oder nicht "Public", klappt es nicht.
 
 
-C. EINMALIG: DEINE DATEN VOM PC AUFS IPHONE
--------------------------------------------
-1. Am PC: Orbit öffnen -> Zahnrad (Startseite oben rechts).
-2. Bei "Abgleich PC <-> iPhone" den Schalter "Bilder und Dateien mitschicken"
-   EINSCHALTEN und auf "Daten senden" klicken -> "Speichern".
-   Die Datei "Orbit-Sync_Datum_Uhrzeit.json" liegt jetzt im Ordner "Downloads".
-3. Eine Mail an dich selbst schreiben und diese Datei anhängen.
-   (Ist die Datei größer als ca. 20 MB, lehnt der Mail-Anbieter sie evtl. ab.
-    Dann stattdessen über iCloud Drive oder OneDrive aufs iPhone bringen.)
-4. Am iPhone die Mail öffnen, auf den Anhang tippen -> Teilen-Symbol ->
+B. AM IPHONE: ALTE VERSION ENTFERNEN, NEUE INSTALLIEREN
+-------------------------------------------------------
+1. Altes Orbit-Symbol auf dem Home-Bildschirm lange drücken ->
+   "App entfernen" -> "Löschen". (Damit ist die alte Netlify-Version weg.)
+2. SAFARI öffnen (nicht Chrome) und  meszcal-orbit.github.io  eingeben.
+3. Unten auf das Teilen-Symbol tippen (Quadrat mit Pfeil nach oben).
+   Etwas nach unten wischen -> "Zum Home-Bildschirm" -> "Hinzufügen".
+4. Safari schließen. Ab jetzt Orbit IMMER über das neue Orbit-Symbol öffnen.
+5. Orbit öffnen -> Name eingeben (PIN optional) -> "Los geht's".
+6. Fragt Orbit "Welches iPhone hast du?": dein Modell antippen.
+
+
+C. AM IPAD: GENAU SO
+--------------------
+1. Am iPad SAFARI öffnen ->  meszcal-orbit.github.io
+2. Oben rechts auf das Teilen-Symbol -> "Zum Home-Bildschirm" -> "Hinzufügen".
+3. Orbit über das neue Symbol öffnen -> Name eingeben -> "Los geht's".
+Orbit zeigt am iPad automatisch die große Ansicht: mehr Spalten, Widgets
+nebeneinander. Hochkant und quer funktionieren,
+beim Drehen wechselt die Ansicht von selbst.
+(Unter Zahnrad -> "Anzeige" siehst du, welches Gerät Orbit erkannt hat.)
+
+
+D. DATEN VOM PC HOLEN
+---------------------
+Weg 1 – mit Cloud (empfohlen, wenn die Cloud am PC eingerichtet ist;
+        im Zahnrad am PC steht dann "Cloud aktiv"):
+Am PC:
+1. Orbit -> Zahnrad -> "Weiteres Gerät verbinden" -> Cloud-Passwort eingeben
+   -> "Code erstellen" -> "Kopieren".
+2. Den Code in eine Mail an dich selbst einfügen und senden.
+Am iPhone (danach genauso am iPad):
+3. Mail öffnen -> auf den Code lange tippen -> "Alles auswählen" -> "Kopieren".
+4. Orbit öffnen -> Zahnrad -> "Cloud einrichten" -> ins Feld tippen ->
+   "Einsetzen" -> Cloud-Passwort eingeben -> "Verbinden".
+5. 1–2 Minuten warten (Internet nötig). Fertig – alle Daten sind da und
+   bleiben ab jetzt von allein auf allen Geräten gleich.
+
+Weg 2 – ohne Cloud, per Mail:
+1. Am PC: Orbit -> Zahnrad -> bei "Abgleich per Mail" den Schalter
+   "Bilder und Dateien mitschicken" einschalten -> "Daten senden" -> "Speichern".
+2. Die Datei "Orbit-Sync_…json" aus "Downloads" an eine Mail an dich anhängen.
+3. Am iPhone/iPad: Mail öffnen -> Anhang antippen -> Teilen-Symbol ->
    "In Dateien sichern" -> "Sichern".
-5. Orbit (Symbol am Home-Bildschirm) öffnen -> "Import" -> die Datei
-   aus "Dateien" wählen -> "Ersetzen". Fertig – alle Daten sind da.
-Danach darfst du das Internet am iPhone ausschalten. Orbit funktioniert weiter.
+4. Orbit -> "Import" (oder Zahnrad -> "Daten empfangen") -> Datei wählen
+   -> "Ersetzen" bzw. "Abgleichen".
 
 
-D. TÄGLICH: PC UND IPHONE ABGLEICHEN (per Mail)
------------------------------------------------
-Du kannst auf beiden Geräten Einträge machen. So bringst du sie zusammen:
-
-Vom iPhone zum PC:
-1. Orbit am iPhone -> Zahnrad -> "Daten senden" -> "Teilen" -> "Mail"
-   -> an dich selbst schicken.
-2. Am PC die Mail öffnen und den Anhang speichern.
-3. Orbit am PC -> Zahnrad -> "Daten empfangen" -> Datei wählen -> "Abgleichen".
-
-Vom PC zum iPhone:
-1. Orbit am PC -> Zahnrad -> "Daten senden" -> "Speichern" -> Datei aus
-   "Downloads" an eine Mail an dich selbst anhängen.
-2. Am iPhone: Anhang -> "In Dateien sichern".
-3. Orbit am iPhone -> Zahnrad -> "Daten empfangen" -> Datei wählen -> "Abgleichen".
-
-Gut zu wissen:
-- Der Dateiname enthält Datum und Uhrzeit, z. B. Orbit-Sync_2026-10-21_18-30.json.
-- Orbit vergleicht jeden einzelnen Eintrag und behält immer den NEUEREN Stand.
-  Es geht also nichts verloren, auch wenn du eine alte Datei erwischst.
-- Ist die Datei älter als deine letzte Änderung, warnt Orbit dich vorher.
-- Was du auf einem Gerät löschst, wird beim Abgleich auch auf dem anderen gelöscht.
-- "Bilder mitschicken" nur einschalten, wenn neue Bilder/Dateien dazugekommen sind
-  (sonst wird die Mail unnötig groß).
-- Vor dem Abgleich zeigt Orbit, was sich ändert. "Abbrechen" ändert nichts.
+E. GESICHT STATT TRESOR-PIN (optional)
+--------------------------------------
+Orbit -> Tresor -> PIN eingeben (Standard 1710) -> Zahnrad im Tresor ->
+Schalter "Mit Face ID entsperren" einschalten -> bestätigen. Ab dann öffnet der Tresor per Face ID.
+(Das iPad Pro 2018 hat ebenfalls Face ID.)
 
 
-E. SICHERHEIT DEINER IPHONE-DATEN
----------------------------------
-- Die Daten liegen nur im iPhone. Wenn du Orbit vom Home-Bildschirm LÖSCHST,
-  sind auch die Daten darauf weg. Deshalb ab und zu "Daten senden" machen –
-  dann liegt immer eine Kopie in deiner Mail und auf dem PC.
-- Tresor-PIN (Standard): 1710 – änderbar im Tresor über das Zahnrad.
+F. NEU IN DIESER VERSION
+------------------------
+- Widgets: Auf der Startseite stehen oben kleine Übersichten, z. B. Fuel Tracker
+  (Kosten diesen Monat, € pro 100 km), nächste Termine, Fitness heute, Fixkosten.
+  Antippen öffnet den Bereich. Auswählen: Zahnrad -> "Darstellung" -> bei
+  "Widgets auf der Startseite" an- und ausschalten.
+  (Echte Widgets auf dem iPhone-Home-Bildschirm erlaubt Apple für solche Apps
+  leider nicht – deshalb sind sie in Orbit auf der Startseite.)
+- Orbit durchsuchen: Im Suchfeld rechts auf das kleine Logo tippen und
+  "Orbit" wählen. Dann sucht das Feld in allen Bereichen von Orbit statt bei Google.
+- Export: Zahnrad -> "Daten" -> "Bereich exportieren" -> Bereich wählen ->
+  "PDF" oder "Excel". Am iPhone/iPad öffnet sich das Teilen-Menü
+  (z. B. "In Dateien sichern" oder Mail). Der Tresor wird nie exportiert.
 
 
-F. UPDATES
-----------
-Wenn du von mir eine neue "Orbit-iPhone.zip" bekommst:
-Bei Netlify deine Seite öffnen -> "Deploys" -> den neuen Ordner "Orbit-iPhone"
-in das Feld ziehen. Orbit am iPhone zweimal öffnen (mit Internet) – fertig.
+G. UPDATES SPÄTER
+-----------------
+Neue "Orbit-iPhone.zip" bekommen:
+1. Entpacken, bei GitHub "meszcal-orbit.github.io" öffnen -> "Add file" ->
+   "Upload files" -> wieder den INHALT von "Orbit-iPhone" hineinziehen ->
+   "Commit changes".
+2. Orbit auf iPhone und iPad zweimal öffnen (mit Internet) – fertig.
 Deine Daten bleiben dabei erhalten.
+
+
+GUT ZU WISSEN
+-------------
+- Löscht du das Orbit-Symbol vom Home-Bildschirm, sind die Daten auf diesem
+  Gerät weg. Mit Cloud ist das egal (holt sie wieder), sonst vorher
+  "Daten senden".
+- Tresor-PIN (Standard): 1710 – änderbar im Tresor über das Zahnrad.

@@ -1,0 +1,1 @@
+import{r as n}from"./index-B8JPb8N-.js";function S(e,r){const[a,s]=n.useState(()=>{try{const t=localStorage.getItem(e);return t===null?r:JSON.parse(t)}catch{return r}});return[a,t=>{s(c=>{const o=typeof t=="function"?t(c):t;try{localStorage.setItem(e,JSON.stringify(o))}catch{}return o})}]}export{S as u};

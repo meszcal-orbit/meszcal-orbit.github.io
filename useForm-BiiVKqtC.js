@@ -1,1 +1,0 @@
-import{r as n}from"./index-C1bBgzKt.js";function f(r){const[a,t]=n.useState(r),o=(e,s)=>t(u=>({...u,[e]:s}));return{values:a,setValues:t,setValue:o,field:e=>({value:a[e]??"",onChange:s=>o(e,s.target.value)}),reset:(e=r)=>t(e)}}export{f as u};
